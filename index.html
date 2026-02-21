@@ -35,7 +35,7 @@
         <div class="header-cards mb-[30px] grid grid-cols-3 gap-4">
             <div class="bg-white p-5 border border-[#f1f2f4] rounded-lg">
                 <p class="font-medium text-[14px] text-[#323b49]">Total</p>
-                <p class="font-bold text-2xl ">8</p>
+                <p id="totalCards" class="font-bold text-2xl ">8</p>
             </div>
             <div class="bg-white p-5 border border-[#f1f2f4] rounded-lg">
                 <p class="font-medium text-[14px] text-[#323b49]">Interview</p>
@@ -56,7 +56,7 @@
 
             <!-- section header btns -->
             <div class="header-btn flex gap-2 mb-4">
-                <div class="btn btn-primary btn-soft px-10 bg-white text-black">All</div>
+                <div id="all-btn" class="btn btn-primary btn-soft px-10 bg-[#3b82f6] text-[12px] font-semibold text-white">All</div>
                 <div class="btn btn-primary btn-soft px-10 bg-white text-[12px] font-medium text-[#64748b]">Interview
                 </div>
                 <div class="btn btn-primary btn-soft px-10 bg-white text-[12px] font-medium text-[#64748b]">Rejected
@@ -65,13 +65,20 @@
 
             <!-- cards section  -->
 
-            <section class="space-y-4">
+            <section id="card-counter" class="space-y-4">
 
                 <!-- card 1 -->
-                <div class="card p-6 bg-white border border-[#f1f2f4] space-y-5 rounded-lg">
-                    <div>
-                        <h3 class="company-name font-semibold text-[18px]">Mobile First Corp</h3>
-                        <h4 class="job-title text-[#64748b]">React Native Developer</h4>
+                <div class="card-left p-6 bg-white border border-[#f1f2f4] space-y-5 rounded-lg">
+                    <div class="flex justify-between">
+                        <div>
+                            <h3 class="company-name font-semibold text-[18px]">Mobile First Corp</h3>
+                            <h4 class="job-title text-[#64748b]">React Native Developer</h4>
+
+                        </div>
+                        <div
+                            class="card-right bg-white border border-[#f1f2f4] w-10 h-10 rounded-full flex justify-center items-center">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
 
                     </div>
                     <p class="description text-[14px] text-[#64748b]">Remote
@@ -101,13 +108,25 @@
 
                 </div>
 
+
                 <!-- card 2 -->
                 <div class="card p-6 bg-white border border-[#f1f2f4] space-y-5 rounded-lg">
-                    <div>
-                        <h3 class="company-name font-semibold text-[18px]">WebFlow Agency</h3>
-                        <h4 class="job-title text-[#64748b]">Web Designer & Developer</h4>
+
+                    <div class="flex justify-between">
+                        <div>
+                            <h3 class="company-name font-semibold text-[18px]">WebFlow Agency</h3>
+                            <h4 class="job-title text-[#64748b]">Web Designer & Developer</h4>
+
+                        </div>
+
+                        <div
+                            class="card-right bg-white border border-[#f1f2f4] w-10 h-10 rounded-full flex justify-center items-center">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
 
                     </div>
+
+
                     <p class="description text-[14px] text-[#64748b]">Los Angeles, CA
                         •
                         Part-time
@@ -137,13 +156,24 @@
 
                 <!-- card 3-->
                 <div class="card p-6 bg-white border border-[#f1f2f4] space-y-5 rounded-lg">
-                    <div>
-                        <h3 class="company-name font-semibold text-[18px]">DataViz Solutions</h3>
-                        <h4 class="job-title text-[#64748b]">
-                            Data Visualization Specialist
-                        </h4>
+
+
+                    <div class="flex justify-between">
+                        <div>
+                            <h3 class="company-name font-semibold text-[18px]">DataViz Solutions</h3>
+                            <h4 class="job-title text-[#64748b]">
+                                Data Visualization Specialist
+                            </h4>
+
+                        </div>
+                        <div
+                            class="card-right bg-white border border-[#f1f2f4] w-10 h-10 rounded-full flex justify-center items-center">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+
 
                     </div>
+
                     <p class="description text-[14px] text-[#64748b]">Boston, MA
                         •
                         Full-time
@@ -173,11 +203,24 @@
 
                 <!-- card 4 -->
                 <div class="card p-6 bg-white border border-[#f1f2f4] space-y-5 rounded-lg">
-                    <div>
-                        <h3 class="company-name font-semibold text-[18px]">CloudFirst Inc</h3>
-                        <h4 class="job-title text-[#64748b]">Backend Developer</h4>
+
+                    <div class="flex justify-between">
+                        <div>
+                            <h3 class="company-name font-semibold text-[18px]">CloudFirst Inc</h3>
+                            <h4 class="job-title text-[#64748b]">Backend Developer</h4>
+
+                        </div>
+
+                        <div
+                            class="card-right bg-white border border-[#f1f2f4] w-10 h-10 rounded-full flex justify-center items-center">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+
+
 
                     </div>
+
+
                     <p class="description text-[14px] text-[#64748b]">Seattle, WA
                         •
                         Full-time
@@ -207,11 +250,24 @@
 
                 <!-- card 5-->
                 <div class="card p-6 bg-white border border-[#f1f2f4] space-y-5 rounded-lg">
-                    <div>
-                        <h3 class="company-name font-semibold text-[18px]">Innovation Labs</h3>
-                        <h4 class="job-title text-[#64748b]">UI/UX Engineer</h4>
+
+
+                    <div class="flex justify-between">
+                        <div>
+                            <h3 class="company-name font-semibold text-[18px]">Innovation Labs</h3>
+                            <h4 class="job-title text-[#64748b]">UI/UX Engineer</h4>
+
+                        </div>
+
+                        <div
+                            class="card-right bg-white border border-[#f1f2f4] w-10 h-10 rounded-full flex justify-center items-center">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+
 
                     </div>
+
+
                     <p class="description text-[14px] text-[#64748b]">Austin, TX
                         •
                         Full-time
@@ -241,9 +297,20 @@
 
                 <!-- card 6-->
                 <div class="card p-6 bg-white border border-[#f1f2f4] space-y-5 rounded-lg">
-                    <div>
-                        <h3 class="company-name font-semibold text-[18px]">MegaCorp Solutions</h3>
-                        <h4 class="job-title text-[#64748b]">JavaScript Developer</h4>
+
+
+                    <div class="flex justify-between">
+                        <div>
+                            <h3 class="company-name font-semibold text-[18px]">MegaCorp Solutions</h3>
+                            <h4 class="job-title text-[#64748b]">JavaScript Developer</h4>
+
+                        </div>
+                        <div
+                            class="card-right bg-white border border-[#f1f2f4] w-10 h-10 rounded-full flex justify-center items-center">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+
+
 
                     </div>
                     <p class="description text-[14px] text-[#64748b]">New York, NY
@@ -275,11 +342,22 @@
 
                 <!-- card 7-->
                 <div class="card p-6 bg-white border border-[#f1f2f4] space-y-5 rounded-lg">
-                    <div>
-                        <h3 class="company-name font-semibold text-[18px]">StartupXYZ</h3>
-                        <h4 class="job-title text-[#64748b]">Full Stack Engineer</h4>
+
+                    <div class="flex justify-between">
+                        <div>
+                            <h3 class="company-name font-semibold text-[18px]">StartupXYZ</h3>
+                            <h4 class="job-title text-[#64748b]">Full Stack Engineer</h4>
+
+                        </div>
+
+                        <div
+                            class="card-right bg-white border border-[#f1f2f4] w-10 h-10 rounded-full flex justify-center items-center">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
 
                     </div>
+
+
                     <p class="description text-[14px] text-[#64748b]">Remote
                         •
                         Full-time
@@ -310,9 +388,19 @@
 
                 <!-- card 7-->
                 <div class="card p-6 bg-white border border-[#f1f2f4] space-y-5 rounded-lg">
-                    <div>
-                        <h3 class="company-name font-semibold text-[18px]">TechCorp Industries</h3>
-                        <h4 class="job-title text-[#64748b]">Senior Frontend Developer</h4>
+
+                    <div class="flex justify-between">
+                        <div>
+                            <h3 class="company-name font-semibold text-[18px]">TechCorp Industries</h3>
+                            <h4 class="job-title text-[#64748b]">Senior Frontend Developer</h4>
+
+                        </div>
+
+                        <div
+                            class="card-right bg-white border border-[#f1f2f4] w-10 h-10 rounded-full flex justify-center items-center">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+
 
                     </div>
                     <p class="description text-[14px] text-[#64748b]">San Francisco, CA
@@ -344,11 +432,17 @@
 
                 </div>
 
-                <!-- card -->
+                <!-- card 8 -->
                 <div class="card p-6 bg-white border border-[#f1f2f4] space-y-5 rounded-lg">
-                    <div>
-                        <h3 class="company-name font-semibold text-[18px]">Mobile First Corp</h3>
-                        <h4 class="job-title text-[#64748b]">React Native Developer</h4>
+                    <div class="flex justify-between">
+                        <div>
+                            <h3 class="company-name font-semibold text-[18px]">Mobile First Corp</h3>
+                            <h4 class="job-title text-[#64748b]">React Native Developer</h4>
+    
+                        </div>
+
+                        <div class="card-right bg-white border border-[#f1f2f4] w-10 h-10 rounded-full flex justify-center items-center"><i
+                                class="fa-regular fa-trash-can"></i></div>
 
                     </div>
                     <p class="description text-[14px] text-[#64748b]">Remote
@@ -377,15 +471,6 @@
 
 
                 </div>
-
-
-
-
-
-
-
-
-
 
             </section>
 
