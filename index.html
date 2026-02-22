@@ -39,11 +39,11 @@
             </div>
             <div class="bg-white p-5 border border-[#f1f2f4] rounded-lg">
                 <p class="font-medium text-[14px] text-[#323b49]">Interview</p>
-                <p class="font-bold text-2xl text-[#10b981]">0</p>
+                <p id="interview" class="font-bold text-2xl text-[#10b981]">0</p>
             </div>
             <div class="bg-white p-5 border border-[#f1f2f4] rounded-lg">
                 <p class="font-medium text-[14px] text-[#323b49]">Rejected</p>
-                <p class="font-bold text-2xl text-[#ef4444]">0</p>
+                <p id="rejected" class="font-bold text-2xl text-[#ef4444]">0</p>
             </div>
         </div>
         <div class="border border-[#e6e7e9] w-full"></div>
@@ -55,11 +55,13 @@
             <h3 class="section-header pb-[25px] font-semibold text-[20px]">Available Jobs</h3>
 
             <!-- section header btns -->
-            <div class="header-btn flex gap-2 mb-4">
-                <div id="all-btn" class="btn btn-primary btn-soft px-10 bg-[#3b82f6] text-[12px] font-semibold text-white">All</div>
-                <div class="btn btn-primary btn-soft px-10 bg-white text-[12px] font-medium text-[#64748b]">Interview
+            <div id="btns-all" class="header-btn flex gap-2 mb-4">
+                <div onclick="toggleBtn('all-btn')" id="all-btn" class="btn btn-primary btn-soft px-10 bg-white text-[12px] hover:bg-[#3b82f6] hover:text-white text-[#64748b] ">All</div>
+
+                <div id="interview-btn" onclick="toggleBtn('interview-btn')" class="btn btn-primary btn-soft px-10 bg-white text-[12px] font-medium hover:bg-[#3b82f6] hover:text-white text-[#64748b]">Interview
                 </div>
-                <div class="btn btn-primary btn-soft px-10 bg-white text-[12px] font-medium text-[#64748b]">Rejected
+
+                <div id="rejected-btn" onclick="toggleBtn('rejected-btn')" class="btn btn-primary btn-soft px-10 bg-white text-[12px] font-medium text-[#64748b] hover:bg-[#3b82f6] hover:text-white">Rejected
                 </div>
             </div>
 
