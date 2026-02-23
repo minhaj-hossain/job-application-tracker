@@ -25,7 +25,7 @@
 
 </head>
 
-<body class="bg-base-200  ">
+<body class="bg-base-200 pb-[100px]">
 
     <!-- header section  -->
     <header class="max-w-5xl px-[50px] mx-auto">
@@ -52,22 +52,32 @@
     <main class="max-w-5xl px-[50px] mx-auto">
 
         <section class="pt-[30px]">
-            <h3 class="section-header pb-[25px] font-semibold text-[20px]">Available Jobs</h3>
+            <div class="flex justify-between items-center">
+                <h3 class="section-header pb-[25px] font-semibold text-[20px]">Available Jobs</h3>
+                <p class="font-medium text-[#64748b]"><span class="total-jobs">0</span> jobs</p>
+
+            </div>
 
             <!-- section header btns -->
             <div id="btns-all" class="header-btn flex gap-2 mb-4">
-                <div onclick="toggleBtn('all-btn')" id="all-btn" class="btn btn-primary btn-soft px-10 bg-white text-[12px] hover:bg-[#3b82f6] hover:text-white text-[#64748b] ">All</div>
+                <div onclick="toggleBtn('all-btn')" id="all-btn"
+                    class="btn btn-primary btn-soft px-10 bg-white text-[12px] hover:bg-[#3b82f6] hover:text-white text-[#64748b] ">
+                    All</div>
 
-                <div id="interview-btn" onclick="toggleBtn('interview-btn')" class="btn btn-primary btn-soft px-10 bg-white text-[12px] font-medium hover:bg-[#3b82f6] hover:text-white text-[#64748b]">Interview
+                <div id="interview-btn" onclick="toggleBtn('interview-btn')"
+                    class="btn btn-primary btn-soft px-10 bg-white text-[12px] font-medium hover:bg-[#3b82f6] hover:text-white text-[#64748b]">
+                    Interview
                 </div>
 
-                <div id="rejected-btn" onclick="toggleBtn('rejected-btn')" class="btn btn-primary btn-soft px-10 bg-white text-[12px] font-medium text-[#64748b] hover:bg-[#3b82f6] hover:text-white">Rejected
+                <div id="rejected-btn" onclick="toggleBtn('rejected-btn')"
+                    class="btn btn-primary btn-soft px-10 bg-white text-[12px] font-medium text-[#64748b] hover:bg-[#3b82f6] hover:text-white">
+                    Rejected
                 </div>
             </div>
 
             <!-- cards section  -->
 
-            <section id="card-counter" class="space-y-4">
+            <section id="card-counter" class="space-y-4 hidden mb-5">
 
                 <!-- card 1 -->
                 <div class="card-left p-6 bg-white border border-[#f1f2f4] space-y-5 rounded-lg">
@@ -90,7 +100,7 @@
                         $130,000 - $175,000</p>
 
                     <div>
-                        <button class="btn max-w-max mb-2 bg-[#eef4ff] uppercase font-medium text-[14px]">Not
+                        <button id="card-not-applied-btn" class="btn max-w-max mb-2 bg-[#eef4ff] uppercase font-medium text-[14px]">Not
                             Applied</button>
                         <p class="text-[14px] text-[#323b49]">Build croass-platform mobile applications using React
                             Native. Work on products used by millions
@@ -99,9 +109,9 @@
                     </div>
 
                     <div>
-                        <button
+                        <button id="card-interview-btn"
                             class="btn max-w-max mr-2 uppercase font-semibold text-[#10b981] text-[14px] border border-[#10b981] ">interview</button>
-                        <button
+                        <button id="card-rejected-btn"
                             class="btn max-w-max uppercase font-semibold text-[#ef4444] border border-[#ef4444]">Rejected</button>
 
                     </div>
@@ -145,7 +155,7 @@
                     </div>
 
                     <div>
-                        <button
+                        <button id=""
                             class="btn max-w-max mr-2 uppercase font-semibold text-[#10b981] text-[14px] border border-[#10b981] ">interview</button>
                         <button
                             class="btn max-w-max uppercase font-semibold text-[#ef4444] border border-[#ef4444]">Rejected</button>
@@ -440,11 +450,13 @@
                         <div>
                             <h3 class="company-name font-semibold text-[18px]">Mobile First Corp</h3>
                             <h4 class="job-title text-[#64748b]">React Native Developer</h4>
-    
+
                         </div>
 
-                        <div class="card-right bg-white border border-[#f1f2f4] w-10 h-10 rounded-full flex justify-center items-center"><i
-                                class="fa-regular fa-trash-can"></i></div>
+                        <div
+                            class="card-right bg-white border border-[#f1f2f4] w-10 h-10 rounded-full flex justify-center items-center">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
 
                     </div>
                     <p class="description text-[14px] text-[#64748b]">Remote
@@ -474,6 +486,20 @@
 
                 </div>
 
+            </section>
+
+            <!-- not available section -->
+            <section class="not-available">
+                <!-- <div class="space-y-5 flex flex-col justify-center items-center bg-white rounded-xl py-[110px] px-6 ">
+                    <div>
+                        <img src="./assets/jobs.png" alt="jobs">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="mb-1 font-semibold text-2xl">No jobs available</h3>
+                        <p class="text-[#64748b]">Check back soon for new job opportunities</p>
+
+                    </div>
+                </div> -->
             </section>
 
         </section>
