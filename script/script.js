@@ -53,117 +53,6 @@ function toggleBtn(id) {
 
 }
 
-//adding event listner to main container to use event delegation
-mainContainer.addEventListener('click', e => {
-
-
-    if (e.target.matches('#all-btn')) {
-        totalCardCounter()
-        notAvailable.innerHTML = '';
-
-        if (cardCounter.children.length == 0) {
-            notAvailable.innerHTML = `
-
-            <div class="space-y-5 flex flex-col justify-center items-center bg-white rounded-xl py-[110px] px-6 ">
-
-                    <div>
-
-                        <img src="./assets/jobs.png" alt="jobs">
-
-                    </div>
-
-                    <div class="text-center">
-
-                        <h3 class="mb-1 font-semibold text-2xl">No jobs available</h3>
-
-                        <p class="text-[#64748b]">Check back soon for new job opportunities</p>
-
-
-
-                    </div>
-
-                </div>
-
-
-
-            `
-
-
-
-
-        } else {
-            notAvailable.innerHTML = '';
-        }
-    }
-
-    if (e.target.matches('#interview-btn')) {
-        totalCardCounter()
-        if (interviewArr.length == 0) {
-            notAvailable.innerHTML = `
-
-            <div class="space-y-5 flex flex-col justify-center items-center bg-white rounded-xl py-[110px] px-6 ">
-
-                    <div>
-
-                        <img src="./assets/jobs.png" alt="jobs">
-
-                    </div>
-
-                    <div class="text-center">
-
-                        <h3 class="mb-1 font-semibold text-2xl">No jobs available</h3>
-
-                        <p class="text-[#64748b]">Check back soon for new job opportunities</p>
-
-
-
-                    </div>
-
-                </div>
-
-            `
-        } else {
-            renderInterview();
-        }
-    }
-
-    if (e.target.matches('#rejected-btn')) {
-
-        totalCardCounter()
-        if (rejectedArr.length == 0) {
-            notAvailable.innerHTML = `
-
-            <div class="space-y-5 flex flex-col justify-center items-center bg-white rounded-xl py-[110px] px-6 ">
-
-                    <div>
-
-                        <img src="./assets/jobs.png" alt="jobs">
-
-                    </div>
-
-                    <div class="text-center">
-
-                        <h3 class="mb-1 font-semibold text-2xl">No jobs available</h3>
-
-                        <p class="text-[#64748b]">Check back soon for new job opportunities</p>
-
-
-
-                    </div>
-
-                </div>
-
-            `
-
-        } else {
-            renderRejected();
-        }
-
-    }
-
-})
-
-
 function notAvailableCard() {
     notAvailable.innerHTML = `
     <div class="space-y-5 flex flex-col justify-center items-center bg-white rounded-xl py-[110px] px-6 ">
@@ -174,6 +63,47 @@ function notAvailableCard() {
         </div>
     </div>`;
 }
+
+//adding event listner to main container to use event delegation
+mainContainer.addEventListener('click', e => {
+
+
+    if (e.target.matches('#all-btn')) {
+        totalCardCounter()
+        notAvailable.innerHTML = '';
+
+        if (cardCounter.children.length == 0) {
+            notAvailableCard();
+        } else {
+            notAvailable.innerHTML = '';
+        }
+    }
+
+    if (e.target.matches('#interview-btn')) {
+        totalCardCounter()
+        if (interviewArr.length == 0) {
+            notAvailableCard();
+            
+        } else {
+            renderInterview();
+        }
+    }
+
+    if (e.target.matches('#rejected-btn')) {
+
+        totalCardCounter()
+        if (rejectedArr.length == 0) {
+            notAvailableCard();
+            
+
+        } else {
+            renderRejected();
+        }
+
+    }
+
+})
+
 
 //setting onclick function on btns
 function addBtnClick(e) {
