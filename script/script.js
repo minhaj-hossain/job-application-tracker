@@ -68,6 +68,15 @@ function notAvailableCard() {
 mainContainer.addEventListener('click', e => {
 
 
+    
+    if (e.target.matches('#card-right-icon')) {
+
+        e.target.parentNode.parentNode.parentNode.remove();
+        totalCardCounter()
+
+    }
+
+
     if (e.target.matches('#all-btn')) {
         totalCardCounter()
         notAvailable.innerHTML = '';
